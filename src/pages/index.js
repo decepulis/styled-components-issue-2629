@@ -29,6 +29,16 @@ export default () => {
       : "default"
   )
 
+  // commenting out the lines inside useState()
+  // and enabling these lines fixes the problem
+  // useEffect(() => {
+  //   setTheme(
+  //     typeof window !== "undefined"
+  //       ? localStorage.getItem("storageTheme") ?? "default"
+  //       : "default"
+  //   )
+  // }, [setTheme])
+
   const changeTheme = event => {
     localStorage.setItem("storageTheme", event.target.value)
     setTheme(event.target.value)
