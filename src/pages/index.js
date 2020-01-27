@@ -29,13 +29,6 @@ export default () => {
       : "default"
   )
 
-  // enabling this effect alleviates the issue,
-  // but causes an unpleasant flash of un-themed content
-
-  // useEffect(() => {
-  //   setTheme(localStorage.getItem("storageTheme") ?? "default")
-  // }, [setTheme])
-
   const changeTheme = event => {
     localStorage.setItem("storageTheme", event.target.value)
     setTheme(event.target.value)
